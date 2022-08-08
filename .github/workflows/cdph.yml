@@ -1,0 +1,30 @@
+name: CDPH
+
+on:
+  schedule:
+    - cron: "30 2 * * *" # run daily at 7:30 a.m. Pacific
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install pipenv
+      run: pipx install pipenv
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        cache: 'pipenv'
+    - run: pipenv install
+    - name: Run scraper
+      run: pipenv run jupyter execute los-angeles-regions.ipynb 
+    - name: Add and commit
+      id: add_commit
+      uses: EndBug/add-and-commit@v8
+      with:
+        committer_name: Automated
+        committer_email: actions@users.noreply.github.com
+        message: "Latest CDPH data"
+    - name: Push
+      run: git push
