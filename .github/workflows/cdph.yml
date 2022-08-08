@@ -18,7 +18,7 @@ jobs:
         cache: 'pipenv'
     - run: pipenv install
     - name: Run scraper
-      run: pipenv run jupyter execute los-angeles-regions.ipynb 
+      run: pipenv run jupyter execute cdph-counties.ipynb
     - name: Add and commit
       id: add_commit
       uses: EndBug/add-and-commit@v8
