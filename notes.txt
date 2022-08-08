@@ -1,0 +1,13 @@
+Notes:
+
+Vaccine Sites:
+
+    Questions for LA Dept. of Health:
+        - Confirm the number of vaccination sites
+        - Ask about eligibility and availability
+        - Ask how vaccines are distributed within the county
+
+    Methodology Notes:
+
+    ToDo: 
+        - Geocode: find addresses, names of places, and phone numbers for each location
