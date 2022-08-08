@@ -9,5 +9,5 @@ Vaccine Sites:
 
     Methodology Notes:
 
-    ToDo: 
+    ToDo/Tasks: 
         - Geocode: find addresses, names of places, and phone numbers for each location
