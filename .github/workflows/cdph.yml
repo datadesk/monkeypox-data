@@ -1,9 +1,9 @@
 name: CDPH
 
 on:
-  schedule:
-    - cron: "30 2 * * *" # run daily at 7:30 a.m. Pacific
-  workflow_dispatch:
+  # schedule:
+  #   - cron: "30 2 * * *" # run daily at 7:30 a.m. Pacific
+  # workflow_dispatch:
 
 jobs:
   scrape:
