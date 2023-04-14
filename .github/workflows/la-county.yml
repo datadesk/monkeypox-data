@@ -2,7 +2,7 @@ name: L.A. County
 
 on:
   schedule:
-    - cron: "30 4 * * *" # run daily at 9:30 a.m. Pacific
+    # - cron: "30 4 * * *" # run daily at 9:30 a.m. Pacific
   workflow_dispatch:
 
 jobs:
